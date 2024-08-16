@@ -70,17 +70,17 @@ By default, the application will be hosted on `http://localhost:8080`.
 To build the Docker image for the application, run the following command in the project directory:
 
 ```bash
-docker build -t node-app .
+docker build . -t node-docker
 ```
 
-This will create a Docker image named `node-app` based on the `Dockerfile`.
+This will create a Docker image named `node-docker` based on the `Dockerfile`.
 
 ### 5. Running the Docker Container
 
 After building the Docker image, you can run the container with the following command:
 
 ```bash
-docker run -p 8080:8080 node-app
+docker run -d -p 8001:8080 node-docker
 ```
 
 This maps port `8080` on your local machine to port `8080` on the Docker container. You can then access the application at `http://localhost:8080`.
